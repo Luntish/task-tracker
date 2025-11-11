@@ -1,17 +1,17 @@
 import java.util.Date;
 
 public class Task {
-    private String id;
+    private int id;
     private String description;
     private StatusEnum status;
     private Date createdAt;
     private Date updatedAt;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -19,8 +19,9 @@ public class Task {
         return description;
     }
 
-    public void setDescription(String description) {
+    public Task setDescription(String description) {
         this.description = description;
+        return this;
     }
 
     public StatusEnum getStatus() {
