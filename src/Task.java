@@ -1,11 +1,15 @@
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Task {
     private int id;
     private String description;
     private StatusEnum status;
-    private Date createdAt;
-    private Date updatedAt;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+
+    public Task(String description) {
+        this.description = description;
+    }
 
     public int getId() {
         return id;
@@ -19,9 +23,8 @@ public class Task {
         return description;
     }
 
-    public Task setDescription(String description) {
+    public void setDescription(String description) {
         this.description = description;
-        return this;
     }
 
     public StatusEnum getStatus() {
@@ -32,19 +35,11 @@ public class Task {
         this.status = status;
     }
 
-    public Date getCreatedAt() {
+    public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
+    public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
-    }
-
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
     }
 }
